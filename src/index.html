@@ -1,15 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
->
-  <title>Kobe Personal Access Website</title>
-</head>
-<body>
-  <h1>Welcome to Kobe's Personal Access Website</h1>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Dashboard</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container">
+        <hgroup>
+            <h1>Personal Dashboard</h1>
+        </hgroup>
+    </header>
+    <!-- End of Header-->
+
+    <!--Main Content-->
+    <main class="container">
+            <div class="grid">
+
+
+                <!-- Bookmarks Card -->
+                <article>
+                    <header>
+                        <h3>Bookmarks</h3>
+                    </header>
+                    <section id="websites">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Website</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Link</th> 
+                                </tr>
+                            </thead>
+                            <tbody id="bookmark-table">
+                                <!-- Populated with JavaScript-->
+                            </tbody>
+                        </table>
+                    </section>
+                </article>
+
+
+                <!-- Anna's Archive Card -->
+                <article>
+                    <header>
+                        <h3>Anna's Archive Book Search</h3>
+                    </header>
+                    <section id="book-search">
+                        <label for="search">Search</label>
+                        <input type="search" id="search-input" name="search" placeholder="Enter book title or author">
+                        <button id="search-button">Search</button>
+                    </section>
+                </article>
+
+
+            </div>
+
+        
+    </main>
+    <script src="./js/bookmarks.js"></script>
+    <script src="./js/annaSearch.js"></script>
+  </body>
 </html>
